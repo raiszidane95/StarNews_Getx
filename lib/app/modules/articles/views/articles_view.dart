@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../routes/app_pages.dart';
 
 import '../controllers/articles_controller.dart';
 import '../widgets/list_article.dart';
@@ -44,7 +45,9 @@ class ArticlesView extends GetView<ArticlesController> {
             ),
           )),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(Routes.POST_ARTICLE);
+        },
         backgroundColor: Color(0xFF2F2D76),
         child: const Icon(Icons.add),
       ),
